@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exam Portal Login - IKGPTU</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* ===== General Page Setup ===== */
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #dbeafe, #e8f5e9);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+    }
+
+    /* ===== Navbar ===== */
+    .navbar {
+      width: 100%;
+      background: linear-gradient(90deg, #051e45, #0056b3);
+      color: white;
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      position: fixed;
+      justify-content: center;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .navbar h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    /* ===== Login Card ===== */
+    .login-card {
+      width: 100%;
+      max-width: 380px;
+      background-color: #0b1b4ae8;
+      border-radius: 1rem;
+      box-shadow: 0 8px 25px rgba(36, 36, 36, 0.168);
+      padding: 2.5rem;
+      margin-top: 7rem;
+      animation: fadeIn 0.6s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .login-title {
+      text-align: center;
+      color: #e3e9f3;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    .form-label {
+      font-weight: 500;
+      color: #ede4e4;
+    }
+
+    .form-control {
+      border-radius: 0.5rem;
+      padding: 0.75rem;
+      border: 1px solid #ced4da;
+      transition: border 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .form-control:focus {
+      border-color: #2678f4;
+      box-shadow: 0 0 5px rgba(13, 110, 253, 0.4);
+    }
+
+    .btn {
+      font-weight: 600;
+      border-radius: 0.5rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      padding: 0.7rem;
+    }
+
+    .btn:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .btn-danger {
+      background-color: #0d6efd;
+      border: none;
+    }
+
+    .btn-success {
+      background-color: #3766e8;
+      border: none;
+    }
+
+    footer {
+      text-align: center;
+      color: #6c757d;
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 500px) {
+      .navbar h1 {
+        font-size: 1.3rem;
+      }
+
+      .login-card {
+        margin-top: 6rem;
+        padding: 2rem;
+      }
+    }
+
+    img {
+      position: absolute;
+      left: 20px;
+      top: 0px;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== Navigation Bar ===== -->
+  <nav class="navbar">
+    <h1>IKGPTU EXAMINATION PORTAL</h1>
+  </nav>
+
+  <!-- ===== Login Section ===== -->
+  <div class="login-card">
+    <h2 class="login-title">Exam Portal Login</h2>
+    <form>
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" id="username" class="form-control" placeholder="Enter your username" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+      </div>
+
+      <!-- ✅ Redirect buttons -->
+    <a href="admin_panel/adminlogin.html" class="btn btn-danger w-100 mb-2">Login as Admin</a>
+
+
+      <a href="student_panel/studentlogin.html" class="btn btn-success w-100">Login as Student</a>
+    </form>
+    <footer>© 2025 Online Examination System | IKGPTU</footer>
+  </div>
+
+  <img src="https://static.vecteezy.com/system/resources/previews/025/547/454/large_2x/study-doodle-background-vector.jpg">
+</body>
+</html>
